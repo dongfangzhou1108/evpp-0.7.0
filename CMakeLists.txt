@@ -49,7 +49,7 @@ if (UNIX)
     SET(CMAKE_CXX_FLAGS_RELEASE "-O3 -g -ggdb -DNDEBUG -DGOOGLE_STRIP_LOG=1")
     SET(DEPENDENT_LIBRARIES event glog pthread)
 else (UNIX)
-    SET(DEPENDENT_LIBRARIES libevent::core libevent::extra glog)
+    SET(DEPENDENT_LIBRARIES event glog)
 endif (UNIX)
 
 if (CMAKE_BENCHMARK_TESTING)
